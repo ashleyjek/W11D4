@@ -8,7 +8,7 @@
 #  updated_at :datetime         not null
 #
 class Move < ApplicationRecord
-    validates :name, uniqueness: {scope: :pokemon, message: "pokemon cannot have the same move more thank once"}
+    validates :name, uniqueness: true, presence: true
 
     has_many :poke_moves,
     foreign_key: :move_id,

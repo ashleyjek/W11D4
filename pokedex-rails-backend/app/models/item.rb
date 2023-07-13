@@ -12,7 +12,7 @@
 #  updated_at :datetime         not null
 #
 class Item < ApplicationRecord
-    validates :name, length: {maximum: 255}, uniqueness: {message: "Name is already in use"}
+    validates :name, length: {maximum: 255}
     validates :price, numericality: {greater_than_or_equal_to: 0}
 
     belongs_to :pokemon,
@@ -20,6 +20,6 @@ class Item < ApplicationRecord
     class_name: :Pokemon
 
 
-    
+
 
 end
