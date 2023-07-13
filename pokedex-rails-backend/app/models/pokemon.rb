@@ -15,24 +15,24 @@
 #
 class Pokemon < ApplicationRecord
 
-    TYPES = [
-        'fire',
-        'electric',
-        'normal',
-        'ghost',
-        'psychic',
-        'water',
-        'bug',
-        'dragon',
-        'grass',
-        'fighting',
-        'ice',
-        'flying',
-        'poison',
-        'ground',
-        'rock',
-        'steel'
-      ].sort.freeze
+  TYPES = [
+      'fire',
+      'electric',
+      'normal',
+      'ghost',
+      'psychic',
+      'water',
+      'bug',
+      'dragon',
+      'grass',
+      'fighting',
+      'ice',
+      'flying',
+      'poison',
+      'ground',
+      'rock',
+      'steel'
+    ].sort.freeze
 
 validates :image_url, presence: true
 validates :name, length: {minimum: 3, maximum: 255}, uniqueness: { message: "'%{value}' is already in use"}
